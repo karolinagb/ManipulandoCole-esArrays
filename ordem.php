@@ -46,20 +46,31 @@ function ordenaNotas(array $nota1, array $nota2) : int
     // Quero ordenar em ordem descrescente
     // Se a nota1 for maior que a nota2, a nota1 vem primeiro
     //Retorna negativo quando o primeiro elemento é maior que o segundo
-    if($nota1['Nota'] > $nota2['Nota']){
-        return -1;
-    }
+    //Elemento 1 vem primeiro
+    // if($nota1['Nota'] > $nota2['Nota']){
+    //     return -1;
+    // }
 
     // Retorna positivo quando o segundo elemento é maior que o primeiro
-    if($nota2['Nota'] > $nota1['Nota']){
-        return 1;
-    }
+    //Elemento 2 vem primeiro
+    // if($nota2['Nota'] > $nota1['Nota']){
+    //     return 1;
+    // }
 
     // Se ela forem iguais retorno zero
     // if($nota1 == $nota2){
     //     return 0;
     // }
-    return 0;
+    // return 0;
+
+    // Posso substituir todas as verificaçoes que fiz acima por uma forma mais simples
+    // Posso utilizar o operador de espaço nave
+    // Esse operador retorna -1 se o primeiro elemento é menor que o segundo
+    // Se o primeiro elemento for maior que o segundo ele retorna 1
+    // E se eles forem iguais ele retorna 0
+    //Isso gera uma ordenação de forma crescente
+    // Se eu quiser de forma descrescente é só inverter os elementos
+    return $nota2['Nota'] <=> $nota1['Nota'];
 }
 
 //Função que recebe outra função para definirmos como o php deve ordenar algo
