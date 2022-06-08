@@ -97,3 +97,5 @@ echo "Quem tirou 10?\n";
 //array_search retorna false caso o elemento não exista
 //array_search também possui o parâmetro strict
 var_dump(array_search('10', $notas, true));
+
+
