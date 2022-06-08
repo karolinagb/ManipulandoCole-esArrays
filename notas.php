@@ -6,7 +6,7 @@ $notas =
     'Roberto' => 7,
     'Joao' => 8,
     'Maria' => 9,
-    'Vinicius' => 6
+    'Vinicius' => null
 ];
 
 // rsort() - ordena de forma contrária do sorte - descrecente
@@ -62,3 +62,20 @@ function funcao(array $valor){
 
     }
 }
+
+//Como verificar se um aluno fez a prova:
+// foreach($notas as $aluno => $nota){
+//     if($aluno == 'Vinicius'){
+//         return true;
+//     }
+// }
+
+//Podemos fazer isso de forma mais rápida
+//array_key_exists() ou key_exists() - verifica se uma chave existe dentro de um array:
+echo "Vinicius fez a prova\n";
+var_dump(array_key_exists('Vinicius', $notas));
+
+//Se eu quiser verificar se uma chave existe e é diferente de nulo:
+//isset() - verifica se dentro do array existe essa chave e se ela nao e nula
+echo "Vinicius fez a prova\n";
+var_dump(isset($notas['Vinicius']));
