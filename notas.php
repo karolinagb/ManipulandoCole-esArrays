@@ -79,3 +79,8 @@ var_dump(array_key_exists('Vinicius', $notas));
 //isset() - verifica se dentro do array existe essa chave e se ela nao e nula
 echo "Vinicius fez a prova\n";
 var_dump(isset($notas['Vinicius']));
+
+
+echo "Alguém tirou 10?\n";
+//in_array = verifica se dentro do array existe o valor passado
+var_dump(in_array(10, $notas));
