@@ -2,7 +2,7 @@
 
 $notas = 
 [
-    'Ana' => 10,
+    'Ana' => '10',
     'Roberto' => 7,
     'Joao' => 8,
     'Maria' => 9,
@@ -84,3 +84,16 @@ var_dump(isset($notas['Vinicius']));
 echo "Alguém tirou 10?\n";
 //in_array = verifica se dentro do array existe o valor passado
 var_dump(in_array(10, $notas));
+
+echo "Alguém tirou 10 tipo inteiro?\n";
+// Se eu quiser verificar o valor exato juntamente com seu tipo
+//3 parametro strict = comparação mais estrita
+//No caso ao inves de usar ==, ele vai usar ===
+var_dump(in_array(10, $notas, true));
+
+echo "Quem tirou 10?\n";
+//Para buscar o valor que possui chave => $notas['Ana']
+//Para encontrar a chave que possui um valor => array_search() - retorna a chave que possui o valor
+//array_search retorna false caso o elemento não exista
+//array_search também possui o parâmetro strict
+var_dump(array_search('10', $notas, true));
