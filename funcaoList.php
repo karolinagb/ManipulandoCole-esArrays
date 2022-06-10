@@ -29,4 +29,6 @@ $dados2 =
 
 var_dump($dados2);
 
+//OBS: list() funciona somente com arrays numéricos e espera que esses índices comecem de 0 (zero).
+
 
